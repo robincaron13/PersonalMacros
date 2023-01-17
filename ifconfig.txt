@@ -1,0 +1,97 @@
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
+	options=1203<RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP>
+	inet 127.0.0.1 netmask 0xff000000 
+	inet6 ::1 prefixlen 128 
+	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1 
+	nd6 options=201<PERFORMNUD,DAD>
+gif0: flags=8010<POINTOPOINT,MULTICAST> mtu 1280
+stf0: flags=0<> mtu 1280
+en6: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether ac:de:48:00:11:22 
+	inet6 fe80::aede:48ff:fe00:1122%en6 prefixlen 64 scopeid 0x4 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect (100baseTX <full-duplex>)
+	status: active
+ap1: flags=8802<BROADCAST,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether 3e:22:fb:0a:fa:a7 
+	media: autoselect
+	status: inactive
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=6463<RXCSUM,TXCSUM,TSO4,TSO6,CHANNEL_IO,PARTIAL_CSUM,ZEROINVERT_CSUM>
+	ether 3c:22:fb:0a:fa:a7 
+	inet6 fe80::5f:f2d:13d1:10%en0 prefixlen 64 secured scopeid 0x6 
+	inet 134.158.85.23 netmask 0xffffff00 broadcast 134.158.85.255
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether 1e:99:fa:2c:92:a0 
+	inet6 fe80::1c99:faff:fe2c:92a0%awdl0 prefixlen 64 scopeid 0x7 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=400<CHANNEL_IO>
+	ether 1e:99:fa:2c:92:a0 
+	inet6 fe80::1c99:faff:fe2c:92a0%llw0 prefixlen 64 scopeid 0x8 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+en3: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=460<TSO4,TSO6,CHANNEL_IO>
+	ether 82:36:3d:20:90:05 
+	media: autoselect <full-duplex>
+	status: inactive
+en2: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=460<TSO4,TSO6,CHANNEL_IO>
+	ether 82:36:3d:20:90:00 
+	media: autoselect <full-duplex>
+	status: inactive
+en4: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=460<TSO4,TSO6,CHANNEL_IO>
+	ether 82:36:3d:20:90:04 
+	media: autoselect <full-duplex>
+	status: inactive
+en1: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=460<TSO4,TSO6,CHANNEL_IO>
+	ether 82:36:3d:20:90:01 
+	media: autoselect <full-duplex>
+	status: inactive
+bridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=63<RXCSUM,TXCSUM,TSO4,TSO6>
+	ether 82:36:3d:20:90:01 
+	Configuration:
+		id 0:0:0:0:0:0 priority 0 hellotime 0 fwddelay 0
+		maxage 0 holdcnt 0 proto stp maxaddr 100 timeout 1200
+		root id 0:0:0:0:0:0 priority 0 ifcost 0 port 0
+		ipfilter disabled flags 0x0
+	member: en1 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 12 priority 0 path cost 0
+	member: en2 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 10 priority 0 path cost 0
+	member: en3 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 9 priority 0 path cost 0
+	member: en4 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 11 priority 0 path cost 0
+	nd6 options=201<PERFORMNUD,DAD>
+	media: <unknown type>
+	status: inactive
+utun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
+	inet6 fe80::1af8:6c11:4401:42ba%utun0 prefixlen 64 scopeid 0xf 
+	nd6 options=201<PERFORMNUD,DAD>
+utun1: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 2000
+	inet6 fe80::b800:6b3d:804:3fc3%utun1 prefixlen 64 scopeid 0x10 
+	nd6 options=201<PERFORMNUD,DAD>
+utun2: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1000
+	inet6 fe80::ce81:b1c:bd2c:69e%utun2 prefixlen 64 scopeid 0x11 
+	nd6 options=201<PERFORMNUD,DAD>
+en5: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=6467<RXCSUM,TXCSUM,VLAN_MTU,TSO4,TSO6,CHANNEL_IO,PARTIAL_CSUM,ZEROINVERT_CSUM>
+	ether 00:e0:4c:68:14:fe 
+	inet6 fe80::1812:e99d:8209:6eb8%en5 prefixlen 64 secured scopeid 0xd 
+	inet 134.158.138.198 netmask 0xfffff800 broadcast 134.158.143.255
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect (1000baseT <full-duplex>)
+	status: active
